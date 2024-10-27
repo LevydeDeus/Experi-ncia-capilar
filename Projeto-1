@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatos de Crescimento Capilar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .product-category {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .product-category button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .product {
+            display: none;
+        }
+        .product.active {
+            display: block;
+        }
+        .product img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .comments {
+            margin-top: 20px;
+        }
+        .comments h3, .relato-form h3 {
+            color: #333;
+        }
+        .comment-box {
+            background-color: #eee;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .relato-form {
+            margin-top: 20px;
+            background-color: #f1f1f1;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .relato-form textarea {
+            width: 100%;
+            height: 80px;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .relato-form button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Relatos de Crescimento Capilar</h1>
+    <p>Compartilhe suas experiências com produtos naturais para o crescimento do cabelo</p>
+</header>
+
+<div class="container">
+    <div class="product-category">
+        <button onclick="showProduct('ricino')">Óleo de Rícino</button>
+        <button onclick="showProduct('coco')">Óleo de Coco</button>
+        <button onclick="showProduct('alecrim')">Óleo de Alecrim</button>
+    </div>
+
+    <!-- Óleo de Rícino -->
+    <div id="ricino" class="product active">
+        <h2>Óleo de Rícino</h2>
+        <img src="https://example.com/oleo-ricino.jpg" alt="Óleo de Rícino">
+        <p>O óleo de rícino é conhecido por promover o crescimento do cabelo, fortalecer os fios e hidratar o couro cabeludo.</p>
+        <div class="comments">
+            <h3>Relatos</h3>
+            <div class="comment-box">
+                <p><strong>Usuário 1:</strong> Usei o óleo de rícino três vezes por semana e notei uma melhora após 2 meses!</p>
+            </div>
+            <div class="comment-box">
+                <p><strong>Usuário 2:</strong> Apliquei no couro cabeludo e deixei agir por 1 hora. Meu cabelo parece mais grosso agora.</p>
+            </div>
+        </div>
+        <div class="relato-form">
+            <h3>Deixe seu relato</h3>
+            <textarea placeholder="Compartilhe sua experiência..."></textarea>
+            <button>Enviar</button>
+        </div>
+    </div>
+
+    <!-- Óleo de Coco -->
+    <div id="coco" class="product">
+        <h2>Óleo de Coco Extra Virgem</h2>
+        <img src="https://example.com/oleo-coco.jpg" alt="Óleo de Coco">
+        <p>O óleo de coco ajuda a hidratar o cabelo, combater a quebra e melhorar a saúde do couro cabeludo.</p>
+        <div class="comments">
+            <h3>Relatos</h3>
+            <div class="comment-box">
+                <p><strong>Usuário 3:</strong> Comecei a usar o óleo de coco nas pontas do cabelo e ficou muito mais hidratado!</p>
+            </div>
+        </div>
+        <div class="relato-form">
+            <h3>Deixe seu relato</h3>
+            <textarea placeholder="Compartilhe sua experiência..."></textarea>
+            <button>Enviar</button>
+        </div>
+    </div>
+
+    <!-- Óleo de Alecrim -->
+    <div id="alecrim" class="product">
+        <h2>Óleo de Alecrim</h2>
+        <img src="https://example.com/oleo-alecrim.jpg" alt="Óleo de Alecrim">
+        <p>O óleo de alecrim é utilizado para estimular a circulação no couro cabeludo e fortalecer os fios.</p>
+        <div class="comments">
+            <h3>Relatos</h3>
+            <div class="comment-box">
+                <p><strong>Usuário 4:</strong> Misturei com óleo de rícino e meu cabelo cresceu mais rápido!</p>
+            </div>
+        </div>
+        <div class="relato-form">
+            <h3>Deixe seu relato</h3>
+            <textarea placeholder="Compartilhe sua experiência..."></textarea>
+            <button>Enviar</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showProduct(productId) {
+        const products = document.querySelectorAll('.product');
+        products.forEach(product => product.classList.remove('active'));
+        document.getElementById(productId).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
